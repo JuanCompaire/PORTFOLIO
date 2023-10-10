@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=deive-width, initial-scale=1.0">
+    <title>Juan Compairé Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9aa694e82c.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul id="sidemenu" style="position: relative;left: 300px">
+                    <li><a href="#header"><b>Home</b></a></li>
+                    <li><a href="#about"><b>About</b></a></li>
+                    <li><a href="#portfolio"><b>Portfolio</b></a></li>
+                    <li><a href="#contact"><b>Contact</b></a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Buenas, soy <span>Juan</span>,<br> y este es mi portafolio</h1>
+            </div>
+        </div>
+    </div>
+    <!----------------about--------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                </br></br></br>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>LENGUAJES</span><br>JAVA,PYTHON,SQL</li>
+                            <li><span>WEB</span><br>Html5, CSS,Bootstrap, JavaScript, Sqlite, PHP,JQuery,.NET, C#</li>
+                            <li><span>HERRAMIENTAS</span><br>Github, Git, Contenedores Docker</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            
+                            <li><span>Experiencia</span><br></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-2024</span><br>Grado Superior Desarollo En Aplicaciones Multiplataformas</li>
+                            <li><span>2020-2022</span><br>Bachiller Cientifico</li>                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+</br>
+
+    <!----------------portfolio--------------->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src = "images/java_project.jpg"style="height:320px">
+                    <div class="layer">
+                        <h3>PLANTAS VS ZOMBIES JAVA</h3>
+                        <p>Desarollo de una forma más sencilla del juego de Plantas VS zombies, a partir de JAVA.</p>
+                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src = "images/pok1.png"style="height:320px">
+                    <div class="layer">
+                        <h3>WEB POKEMONS</h3>
+                        <p>Proyecto web sobre Pokemons, que incluye HTML5, con CSS e implemente una base de datos SQL, con  PHP.</p>
+                        <a href="https://github.com/JuanCompaire/WEB_POKEMONS/tree/main"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src = "images/documento.avif"style="height:320px">
+                    <div class="layer">
+                        <h3>PORTFOLIO</h3>
+                        <p>El codigo de este portafolio, tanto el html, como css y js</p>
+                        <a href="https://github.com/JuanCompaire/Portfolio"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+            <a href="https://github.com/JuanCompaire" class="btn">See more</a>
+        </div>
+    </div>
+
+    <!----------------contact--------------->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>juancompaire2004@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>611171817</p>
+                    <div class="social-icons">
+                        <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                        <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/JuanCompaire"><i class="fa-brands fa-github fa-bounce"></i></a>
+                    </div>
+                    <a href="images/CV - Juan Compairé Ruiz (1).pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name"required>
+                        <input type="email" name="Email" placeholder="Your Email"required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link"); 
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab"); 
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+
+    </script>
+
+    <script>
+        
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right = "0";
+        }
+
+        function closemenu(){
+            sidemeu.style.right = "-200px";
+        }
+
+    </script>
+    
+
+</body>
+</html>
